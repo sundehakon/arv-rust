@@ -1,13 +1,16 @@
 use std::io;
 
+// Trait definerer tre metoder som typer av trait må implementere
 trait  Dyr {
     fn lager_hvilken_lyd(&self) -> String;
     fn spiser(&self) -> String;
     fn er_farlig(&self) -> bool;
 }
 
+// Definerer struct
 struct Løve;
 
+// Implementerer trait for struct
 impl Dyr for Løve {
     fn lager_hvilken_lyd(&self) -> String {
         "Brøl".to_string()
@@ -34,6 +37,7 @@ impl Dyr for Hund {
     }
 }
 
+// Funksjon som tar inn en string og printer ut informasjon om dyret
 fn hent_dyr_info(input: &str) {
     match input.to_lowercase().as_str() {
         "løve" => {
@@ -52,6 +56,7 @@ fn hent_dyr_info(input: &str) {
     }
 }
 
+// Main funksjonen som kjører programmet og håndterer input
 fn main() {
     println!("Skriv inn navnet på et dyr (løve eller hund):");
 
