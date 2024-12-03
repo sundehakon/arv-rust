@@ -1,3 +1,5 @@
+use std::io;
+
 trait  Dyr {
     fn lager_hvilken_lyd(&self) -> String;
     fn spiser(&self) -> String;
@@ -56,6 +58,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Kunne ikke lese linje");
     let input = input.trim();
-    
+
     hent_dyr_info(input);
 }
