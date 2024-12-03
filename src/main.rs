@@ -51,5 +51,11 @@ fn hent_dyr_info(input: &str) {
 }
 
 fn main() {
+    println!("Skriv inn navnet på et dyr (løve eller hund):");
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Kunne ikke lese linje");
+    let input = input.trim();
     
+    hent_dyr_info(input);
 }
